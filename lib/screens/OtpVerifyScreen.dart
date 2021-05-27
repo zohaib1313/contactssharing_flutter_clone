@@ -60,10 +60,9 @@ class OtpVerifyScreen extends StatelessWidget {
                   animationType: AnimationType.fade,
                   pinTheme: PinTheme(
                       shape: PinCodeFieldShape.box,
-                      borderRadius: BorderRadius.circular(5),
-                      fieldOuterPadding: EdgeInsets.all(16),
-                      fieldHeight: 30,
-                      fieldWidth: 30,
+
+                      fieldHeight: 35,
+                      fieldWidth: 35,
                       borderWidth: 2,
                       disabledColor: Colors.white70,
                       inactiveColor: Colors.white70,

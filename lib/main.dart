@@ -6,7 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:splashscreen/splashscreen.dart';
 
+import 'screens/AllContacts/Controller/AllContactsController.dart';
+
 void main() {
+  Get.put(AllContactsController());
   runApp(GetMaterialApp(debugShowCheckedModeBanner: false, home: MyApp()));
 }
 

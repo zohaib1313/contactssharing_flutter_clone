@@ -7,14 +7,17 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-class ProfileInfo extends StatelessWidget {
+class ProfileInfo extends GetView {
+  final x = Get.width;
+  final y = Get.height;
+
   @override
   Widget build(BuildContext context) {
     return Material(
       child: SafeArea(
         child: Scaffold(
           body: Container(
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(x * 0.05),
             child: Column(
               children: [
                 Row(
@@ -30,21 +33,21 @@ class ProfileInfo extends StatelessWidget {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding: EdgeInsets.all(x * 0.1),
                   child: Center(
                     child: CircleAvatar(
                       backgroundColor: MyColors.primaryColor,
                       maxRadius: 100,
                       minRadius: 100,
-                      backgroundImage: AssetImage("place_holder.png"),
+                      backgroundImage: AssetImage("assets/place_holder.png"),
                       child: Align(
                         alignment: Alignment.bottomRight,
                         child: Padding(
-                          padding: const EdgeInsets.all(16),
+                          padding: EdgeInsets.all(x * 0.04),
                           child: CircleAvatar(
                             backgroundColor: MyColors.primaryColor,
-                            maxRadius: 16,
-                            minRadius: 16,
+                            maxRadius: x * 0.05,
+                            minRadius: x * 0.05,
                             child: Icon(Icons.camera),
                           ),
                         ),
@@ -61,7 +64,7 @@ class ProfileInfo extends StatelessWidget {
                     ),
                     Expanded(
                       child: Container(
-                        margin: EdgeInsets.only(left: 4),
+                        margin: EdgeInsets.only(left: x * 0.04),
                         child: TextFormField(
                           decoration: InputDecoration(
                             hintText: "User name",
@@ -79,12 +82,13 @@ class ProfileInfo extends StatelessWidget {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20), // <-- Radius
+                          borderRadius:
+                              BorderRadius.circular(x * 0.15), // <-- Radius
                         ),
                       ),
                       child: Container(
                           width: double.infinity,
-                          padding: EdgeInsets.all(14),
+                          padding: EdgeInsets.all(x * 0.04),
                           child: Text(
                             "Save",
                             textAlign: TextAlign.center,
